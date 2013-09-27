@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Item;
 import model.Look;
 import model.SearchResult;
 
@@ -50,7 +51,7 @@ public class DefaultController extends HttpServlet
 		{
 			Look look = allLooks.get(Integer.parseInt(realizeLookIndex));
 
-			Map<Look, String> rawResults = searchService.getSearchResults(look);
+			Map<Item, String> rawResults = searchService.getSearchResults(look);
 
 			List<SearchResult> searchResults = extractor.extract(rawResults);
 

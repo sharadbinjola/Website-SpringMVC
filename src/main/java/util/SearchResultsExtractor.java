@@ -1,9 +1,15 @@
 package util;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import model.Look;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import model.Item;
 import model.SearchResult;
 
 /**
@@ -13,7 +19,40 @@ import model.SearchResult;
  */
 public class SearchResultsExtractor
 {
-	public List<SearchResult> extract(Map<Look, String> rawResults) {
-		return null;
+	public List<SearchResult> extract(Map<Item, String> rawResults) {
+		List<SearchResult> searchResults = new ArrayList<SearchResult>();
+
+		for (Map.Entry<Item, String> rawResult : rawResults.entrySet())
+		{
+			Item item = rawResult.getKey();
+			String title = item.getColor() + " " + item.getType() + " for " + item.getAudience();
+			
+			String result = rawResult.getValue();
+			result = getFilteredResultHtml(result, 3);
+			SearchResult searchResult = new SearchResult(title, result);
+
+			searchResults.add(searchResult);
+			
+		}
+		return searchResults;
+	}
+
+	private String getFilteredResultHtml(String rawResult, int maxCount) {
+		Document doc = Jsoup.parse(rawResult);
+		Elements sssElements = doc.getElementsByClass("sss");
+		Elements storeElements = doc.getElementsByClass("store");
+		Elements starsAndPrimeElements = doc.getElementsByClass("starsAndPrime");
+		Elements usedNewPriceElements = doc.getElementsByClass("usedNewPrice");
+		sssElements.remove();
+		storeElements.remove();
+		starsAndPrimeElements.remove();
+		usedNewPriceElements.remove();
+		
+		String allResults = "";
+		for(int i = 0; i < maxCount; i++) {
+			Element result = doc.getElementById("result_" + i);
+			allResults += result.toString();
+		}
+		return allResults;
 	}
 }

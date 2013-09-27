@@ -13,9 +13,8 @@
 	<table border="1" cellpadding="5" width="100%" height="100%">
 		<tr valign="top" align="center">
 			<td width="15%">
-				<h2>Selector</h2>
+				<h3>Selector</h3>
 				<br />
-				<input type="button" id="reset" onclick="startOver()" value="Reset" />
 				<br />
 				Select a Clothing item... <br /><br />
 				<select id="firstDropdown" onchange="nextSecondAction()">
@@ -42,9 +41,8 @@
 				</select>
 				
 				<br /><br />
-				<input type="button" id="visualize" value="Visualize" onclick="visualize()" />
 				
-				<input type="button" id="realize" value="Realize" />
+				<input type="button" id="reset" onclick="startOver()" value="Reset" />
 				
 				<script type="text/javascript">
 					var allLooks = ${allLooksJson};
@@ -280,6 +278,9 @@
 				    	videoPlayer += allLooks[finalSelectedLookIndex].visualUrl;
 				    	videoPlayer += "\"></source></video>";
 				    	visualizer.innerHTML = videoPlayer;
+				    	
+				    	var realize = document.getElementById("realize");
+				    	realize.hidden = false;
 				    }
 				    
 				    function findSelectedLookIndex(firstSelectedLookText, secondSelectedLookText, thirdSelectedLookText) {
@@ -334,15 +335,16 @@
 			</td>
 			
 			<td width="25%">
-				<h2>Visualizer</h2>
+				<h3>Visualizer</h3>
 				<div id="visualizer_div">
 				</div>
-				
+				<input type="button" id="realize" hidden="true" value="Realize" />
 			</td>
 			
 			<td>
-				<h2>Realizer</h2>
+				<h3>Realizer</h3>
 				<div id="realizer_div"></div>
+				
 			</td>
 		</tr>
 	</table>	
