@@ -27,7 +27,7 @@ public class SearchService
 		for (Item item : items)
 		{
 			String searchUrl = searchUrlPrefix;
-			searchUrl += item.getColor() + "%20" + item.getType() + "%20" + item.getAudience();
+			searchUrl += item.getColor().replaceAll(" ", "%20") + "%20" + item.getType() + "%20" + item.getAudience();
 			String searchResult = getHTML(searchUrl);
 			searchResults.put(item, searchResult);
 		}

@@ -19,16 +19,18 @@ import model.SearchResult;
  */
 public class SearchResultsExtractor
 {
+	private static final int MAX_RESULTS = 3;
+
 	public List<SearchResult> extract(Map<Item, String> rawResults) {
 		List<SearchResult> searchResults = new ArrayList<SearchResult>();
-
+		
 		for (Map.Entry<Item, String> rawResult : rawResults.entrySet())
 		{
 			Item item = rawResult.getKey();
 			String title = item.getColor() + " " + item.getType() + " for " + item.getAudience();
 			
 			String result = rawResult.getValue();
-			result = getFilteredResultHtml(result, 3);
+			result = getFilteredResultHtml(result, MAX_RESULTS);
 			SearchResult searchResult = new SearchResult(title, result);
 
 			searchResults.add(searchResult);
