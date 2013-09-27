@@ -2,6 +2,8 @@ package service;
 
 import java.util.List;
 
+import org.json.simple.JSONArray;
+
 import model.Look;
 import dao.LookDao;
 
@@ -16,5 +18,9 @@ public class LookReaderService
 
 	public List<Look> getAllLooks() {
 		return dao.getAllLooks();
+	}
+	
+	public JSONArray getAllLooksAllJson() {
+		return dao.getAllLooksAllJson();
 	}
 }

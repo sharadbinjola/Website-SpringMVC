@@ -15,6 +15,7 @@ import model.Look;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.json.simple.JSONArray;
 import org.springframework.web.servlet.ModelAndView;
 
 import service.LookReaderService;
@@ -44,10 +45,10 @@ public class DefaultController extends HttpServlet {
         //out.flush();
         
     	List<Look> allLooks = lookReaderService.getAllLooks();
+    	JSONArray allLooksJson = lookReaderService.getAllLooksAllJson();
     	
-    	String now = (new Date()).toString();
-        request.setAttribute("now", now);
-        request.setAttribute("allLooks", allLooks);
+    	request.setAttribute("allLooks", allLooks);
+    	request.setAttribute("allLooksJson", allLooksJson);
         request.getRequestDispatcher("/WEB-INF/jsp/main.jsp").forward(request, response);
     }
     
