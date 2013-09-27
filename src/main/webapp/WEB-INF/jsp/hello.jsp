@@ -10,7 +10,7 @@
     <%@ include file="/WEB-INF/jsp/NavigationBar/navbar.jsp" %>
 	
     <h1>Hello - Spring Application</h1>
-    <p>Greetings, it is now <c:out value="${now}"/></p>
+    <p>Greetings, it is now <c:out value="${now}"/> bleh bleh</p>
 	
 	<%@ include file="/WEB-INF/jsp/js/loadJS.jsp" %>
   </body>
