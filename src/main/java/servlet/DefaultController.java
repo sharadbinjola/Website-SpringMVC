@@ -3,15 +3,12 @@ package servlet;
 import java.io.IOException;
 import java.util.Date;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.web.servlet.ModelAndView;
@@ -27,19 +24,20 @@ public class DefaultController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String now = (new Date()).toString();
-        HttpSession session = request.getSession();
-        ServletContext sc = session.getServletContext();
-        String x = sc.getRealPath("/");
-        String host = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort(); 
+    	String host = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort(); 
+    	request.setAttribute("path", host);
         
+    	//HttpSession session = request.getSession();
+        //ServletContext sc = session.getServletContext();
+        //String x = sc.getRealPath("/");
+    	
         //ServletOutputStream out = response.getOutputStream();
         //out.write(host.getBytes());
         //out.flush();
         
-        request.setAttribute("path", host);
+    	String now = (new Date()).toString();
         request.setAttribute("now", now);
-        request.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/jsp/main.jsp").forward(request, response);
     }
     
     @Override
@@ -55,7 +53,7 @@ public class DefaultController extends HttpServlet {
 
     	String now = (new Date()).toString();
         logger.info("Returning hello view with " + now);
-        return new ModelAndView("/WEB_INF/jsp/hello.jsp", "now", now);
+        return new ModelAndView("/WEB_INF/jsp/main.jsp", "now", now);
     }
 }
 
