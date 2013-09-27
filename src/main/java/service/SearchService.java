@@ -11,7 +11,7 @@ import model.Look;
  */
 public class SearchService
 {
-	public Map<Look, String> getProducts(Look look) {
+	public Map<Look, String> getSearchResults(Look look) {
 		return null;
 		
 	}

@@ -1,3 +1,4 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <%@ include file="/WEB-INF/jsp/include.jsp" %>
 
 <html>
@@ -9,9 +10,9 @@
   <body>
     <%@ include file="/WEB-INF/jsp/NavigationBar/navbar.jsp" %>	
 	
-	<table border="1" cellpadding="5" width="100%">
+	<table border="1" cellpadding="5" width="100%" height="100%">
 		<tr valign="top" align="center">
-			<td width="25%">
+			<td width="15%">
 				<h2>Selector</h2>
 				<br />
 				<input type="button" id="reset" onclick="startOver()" value="Reset" />
@@ -43,9 +44,11 @@
 				<br /><br />
 				<input type="button" id="visualize" value="Visualize" onclick="visualize()" />
 				
+				<input type="button" id="realize" value="Realize" />
 				
 				<script type="text/javascript">
 					var allLooks = ${allLooksJson};
+					var finalSelectedLookIndex;
 					
 					startOver();
 					
@@ -254,7 +257,6 @@
 			    						others[length++] = item;
 			    					}
 			    				}
-			    				
 			    			}
 			    		}
 			    		
@@ -271,11 +273,11 @@
 				    	var thirdDropdown = document.getElementById("thirdDropdown");
 				    	var thirdSelectedLookText = thirdDropdown.options[thirdDropdown.selectedIndex].text;
 				    	
-				    	var selectedLookIndex = findSelectedLookIndex(firstSelectedLookText, secondSelectedLookText, thirdSelectedLookText);
+				    	finalSelectedLookIndex = findSelectedLookIndex(firstSelectedLookText, secondSelectedLookText, thirdSelectedLookText);
 				    	
 				    	var visualizer = document.getElementById("visualizer_div");
 				    	var videoPlayer = "<video width=\"430\" height=\"576\" autoplay><source id=\"visualizer_source\" type=\"video/mp4\" src=\"";
-				    	videoPlayer += allLooks[selectedLookIndex].visualUrl;
+				    	videoPlayer += allLooks[finalSelectedLookIndex].visualUrl;
 				    	videoPlayer += "\"></source></video>";
 				    	visualizer.innerHTML = videoPlayer;
 				    }
@@ -307,20 +309,40 @@
 				    	return -1;		// this should never happen!
 				    }
 				    
+				    $(document).ready(function(){
+				    	  $('#realize').click(function(){
+				    		  	//alert("click event");
+
+				    		  	$.ajax({
+				    		        type: "GET",
+				    		        url: "/home",
+				    		        data: { realizeLookIndex : finalSelectedLookIndex  }
+				    		      }).done(function( msg ) {
+				    		    	  var realizer = document.getElementById("realizer_div");
+				    		    	  realizer.innerHTML = msg;
+				    		        //alert( "Data Saved: " + msg );
+				    		      });
+
+				    	    });
+				    	   });
+				    	
+				    
+				   
 				</script>
+				
+				 
 			</td>
 			
-			<td width="40%">
+			<td width="25%">
 				<h2>Visualizer</h2>
 				<div id="visualizer_div">
-				
-			    
 				</div>
 				
 			</td>
 			
 			<td>
 				<h2>Realizer</h2>
+				<div id="realizer_div"></div>
 			</td>
 		</tr>
 	</table>	
