@@ -3,7 +3,7 @@ package model;
 /**
  * 
  * @author sharadb
- *
+ * 
  */
 public class SearchResult
 {
@@ -31,5 +31,10 @@ public class SearchResult
 
 	public void setResult(String result) {
 		this.result = result;
+	}
+
+	@Override
+	public String toString() {
+		return "SearchResult [title=" + title + ", result=" + result + "]";
 	}
 }

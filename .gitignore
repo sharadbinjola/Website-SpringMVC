@@ -3,3 +3,6 @@ ${deploy.path}/Website-SpringMVC.war
 Website-SpringMVC.war
 target/*
 src/main/webapp/WEB-INF/classes/
+desktop.ini
+src/main/webapp/WEB-INF/lib/desktop.ini
+.classpath

@@ -10,7 +10,7 @@ import java.util.List;
 public class Look
 {
 	private List<Item> items;
-	private String lookVisualUrl;
+	private String visualUrl;
 
 	public List<Item> getItems() {
 		return items;
@@ -20,11 +20,16 @@ public class Look
 		this.items = items;
 	}
 
-	public String getLookVisualUrl() {
-		return lookVisualUrl;
+	public String getVisualUrl() {
+		return visualUrl;
 	}
 
-	public void setLookVisualUrl(String lookVisualUrl) {
-		this.lookVisualUrl = lookVisualUrl;
+	public void setVisualUrl(String visualUrl) {
+		this.visualUrl = visualUrl;
+	}
+
+	@Override
+	public String toString() {
+		return "Look [items=" + items + ", visualUrl=" + visualUrl + "]";
 	}
 }
