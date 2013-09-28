@@ -27,11 +27,13 @@
 		var realize = document.getElementById("realize");
 		if(realize != null) {
     		realize.hidden = true;
+    		realize.className = "";
 		}
 		
 		var resetButton = document.getElementById("reset");
 		if(resetButton != null) {
 			resetButton.hidden = true;
+			resetButton.className = "";
 		}
 		
 		var firstDropDown = document.getElementById("firstDropdown");
@@ -119,6 +121,31 @@
     }
     
     function nextThirdAction() {
+    	document.getElementById("thirdDropdown").hidden = true;
+		document.getElementById("secondGoesWellWith").hidden = true;
+		
+		var videoPlayer = document.getElementById("videoPlayer");
+		if(videoPlayer != null) {
+			videoPlayer.parentNode.removeChild(videoPlayer);
+		}
+		
+		var realizerDiv = document.getElementById("realizer_div");
+		if(realizerDiv != null) {
+			realizerDiv.innerHTML = "";
+		}
+		
+		var realize = document.getElementById("realize");
+		if(realize != null) {
+    		realize.hidden = true;
+    		realize.className = "";
+		}
+		
+		var resetButton = document.getElementById("reset");
+		if(resetButton != null) {
+			resetButton.hidden = true;
+			resetButton.className = "";
+		}
+		
     	var firstDropdown = document.getElementById("firstDropdown");
     	var firstSelectedLookIndex = firstDropdown.options[firstDropdown.selectedIndex].value.split("_")[0];
     	var firstSelectedLookType = firstDropdown.options[firstDropdown.selectedIndex].value.split("_")[1];
@@ -257,9 +284,11 @@
     	
     	var realize = document.getElementById("realize");
     	realize.hidden = false;
+    	realize.className = "myButtonCss";
     	
     	var resetButton = document.getElementById("reset");
     	resetButton.hidden = false;
+    	resetButton.className = "myButtonCss";
     }
     
     function findSelectedLookIndex(firstSelectedLookText, secondSelectedLookText, thirdSelectedLookText) {

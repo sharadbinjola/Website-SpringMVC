@@ -4,9 +4,9 @@
 	<table>
 	<tr>
 	<c:forEach var="searchResult" items="${searchResults}">
-		<td width="33%">
+		<td>
 			<div style='height:100%; overflow:auto;'>
-				${searchResult.title} <br /><br />
+				<center><b>${searchResult.title}</b></center><br />
 				${searchResult.result}
 			</div>
 		</td>

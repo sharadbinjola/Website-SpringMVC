@@ -41,14 +41,23 @@ public class SearchResultsExtractor
 
 	private String getFilteredResultHtml(String rawResult, int maxCount) {
 		Document doc = Jsoup.parse(rawResult);
-		Elements sssElements = doc.getElementsByClass("sss");
-		Elements storeElements = doc.getElementsByClass("store");
-		Elements starsAndPrimeElements = doc.getElementsByClass("starsAndPrime");
-		Elements usedNewPriceElements = doc.getElementsByClass("usedNewPrice");
-		sssElements.remove();
-		storeElements.remove();
-		starsAndPrimeElements.remove();
-		usedNewPriceElements.remove();
+		Elements newPrice = doc.getElementsByClass("newPrice");
+		Elements usedPrice = doc.getElementsByClass("usedPrice");
+		Elements sssUnrated = doc.getElementsByClass("sssUnrated");
+		Elements number = doc.getElementsByClass("number");
+		Elements sss = doc.getElementsByClass("sss");
+		Elements sssFree = doc.getElementsByClass("sssFree");
+		Elements sssLastLine = doc.getElementsByClass("sssLastLine");
+		Elements starsAndPrime = doc.getElementsByClass("starsAndPrime");
+		
+		sss.remove();
+		number.remove();
+		newPrice.remove();
+		usedPrice.remove();
+		sssUnrated.remove();
+		sssFree.remove();
+		sssLastLine.remove();
+		starsAndPrime.remove();
 		
 		String allResults = "";
 		for(int i = 0; i < maxCount; i++) {
