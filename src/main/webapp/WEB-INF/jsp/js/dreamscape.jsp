@@ -123,6 +123,7 @@
     function nextThirdAction() {
     	document.getElementById("thirdDropdown").hidden = true;
 		document.getElementById("secondGoesWellWith").hidden = true;
+		removeAllOptions(document.getElementById("thirdDropdown"));
 		
 		var videoPlayer = document.getElementById("videoPlayer");
 		if(videoPlayer != null) {
