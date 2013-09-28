@@ -7,7 +7,8 @@
 		<td>
 			<div style='height:100%; overflow:auto;'>
 				<center><b>${searchResult.title}</b></center><br />
-				${searchResult.result}
+				${searchResult.result}<br /><br />
+				<a href="${searchResult.url}" target="_blank"><b>See more recommendations>></b></a>
 			</div>
 		</td>
 	</c:forEach>

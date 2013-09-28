@@ -112,14 +112,6 @@
 		]
 	},
 	{
-		"visualUrl": "http://ecx.images-amazon.com/images/I/91P-zC9hjgS.mp4",
-		"items": [
-			{ "type":"Pants", "color":"Maroon", "audience":"Men" }, 
-			{ "type":"TShirt", "color":"Black", "audience":"Men" }, 
-			{ "type":"Shoes", "color":"Black", "audience":"Men" }
-		]
-	},
-	{
 		"visualUrl": "http://ecx.images-amazon.com/images/I/9137-X3gnGS.mp4",
 		"items": [
 			{ "type":"Pants", "color":"Light Brown", "audience":"Men" }, 

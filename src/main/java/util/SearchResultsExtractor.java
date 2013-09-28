@@ -10,6 +10,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import model.Item;
+import model.ItemType;
 import model.SearchResult;
 
 /**
@@ -19,6 +20,8 @@ import model.SearchResult;
  */
 public class SearchResultsExtractor
 {
+	private static final String apparelSearchUrlPrefix = "http://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Dapparel&field-keywords=";
+	private static final String shoesSearchUrlPrefix = "http://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Dshoes&field-keywords=";
 	private static final int MAX_RESULTS = 3;
 
 	public List<SearchResult> extract(Map<Item, String> rawResults) {
@@ -31,7 +34,7 @@ public class SearchResultsExtractor
 			
 			String result = rawResult.getValue();
 			result = getFilteredResultHtml(result, MAX_RESULTS);
-			SearchResult searchResult = new SearchResult(title, result);
+			SearchResult searchResult = new SearchResult(title, result, getSearchUrl(item));
 
 			searchResults.add(searchResult);
 			
@@ -39,6 +42,16 @@ public class SearchResultsExtractor
 		return searchResults;
 	}
 
+	private String getSearchUrl(Item item) {
+		String searchUrl = apparelSearchUrlPrefix;
+		if(item.getType().equals(ItemType.Shoes)) {
+			searchUrl = shoesSearchUrlPrefix;
+		}
+		searchUrl += item.getColor().replaceAll(" ", "%20") + "%20" + item.getType() + "%20" + item.getAudience();
+		
+		return searchUrl;
+	}
+	
 	private String getFilteredResultHtml(String rawResult, int maxCount) {
 		Document doc = Jsoup.parse(rawResult);
 		Elements newPrice = doc.getElementsByClass("newPrice");

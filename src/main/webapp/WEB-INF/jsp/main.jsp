@@ -43,8 +43,8 @@
 				</div>
 				
 				<br />
-				<input type="button" id="reset" onclick="startOver()" value="Reset" hidden="true" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="button" id="realize" hidden="true" value="Realize" align="bottom" />
+				<input type="button" id="reset" onclick="startOver()" value="Start over" hidden="true" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" id="realize" hidden="true" value="Find this Look!" align="bottom" />
 			</td>
 			
 			<td align="center">

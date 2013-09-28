@@ -33,11 +33,7 @@ public class SearchService
 		List<Future<String>> futureResults = new ArrayList<Future<String>>();
 		for (Item item : items)
 		{
-			String searchUrl = apparelSearchUrlPrefix;
-			if(item.getType().equals(ItemType.Shoes)) {
-				searchUrl = shoesSearchUrlPrefix;
-			}
-			searchUrl += item.getColor().replaceAll(" ", "%20") + "%20" + item.getType() + "%20" + item.getAudience();
+			String searchUrl = getSearchUrl(item);
 
 			Future<String> futureResult = executor.submit(new PageDownloader(searchUrl));
 			futureResults.add(futureResult);
@@ -66,5 +62,15 @@ public class SearchService
 		}
 
 		return searchResults;
+	}
+	
+	private String getSearchUrl(Item item) {
+		String searchUrl = apparelSearchUrlPrefix;
+		if(item.getType().equals(ItemType.Shoes)) {
+			searchUrl = shoesSearchUrlPrefix;
+		}
+		searchUrl += item.getColor().replaceAll(" ", "%20") + "%20" + item.getType() + "%20" + item.getAudience();
+		
+		return searchUrl;
 	}
 }

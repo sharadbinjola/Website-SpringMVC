@@ -29,7 +29,7 @@
 	font-style:normal;
 	height:40px;
 	line-height:40px;
-	width:100px;
+	width:140px;
 	text-decoration:none;
 	text-align:center;
 	text-shadow:1px 1px 0px #ffffff;

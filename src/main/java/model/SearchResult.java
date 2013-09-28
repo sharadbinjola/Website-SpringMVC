@@ -9,13 +9,7 @@ public class SearchResult
 {
 	private String title;
 	private String result;
-
-	public SearchResult(String title, String result)
-	{
-		super();
-		this.title = title;
-		this.result = result;
-	}
+	private String url;
 
 	public String getTitle() {
 		return title;
@@ -33,8 +27,24 @@ public class SearchResult
 		this.result = result;
 	}
 
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public SearchResult(String title, String result, String url)
+	{
+		super();
+		this.title = title;
+		this.result = result;
+		this.url = url;
+	}
+
 	@Override
 	public String toString() {
-		return "SearchResult [title=" + title + ", result=" + result + "]";
+		return "SearchResult [title=" + title + ", result=" + result + ", url=" + url + "]";
 	}
 }
