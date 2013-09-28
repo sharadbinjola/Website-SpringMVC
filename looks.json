@@ -198,5 +198,181 @@
 			{ "type":"Shirt", "color":"Pink", "audience":"Men" }, 
 			{ "type":"Shoes", "color":"Black", "audience":"Men" }
 		]
+	},
+		{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91fp5UCd0dS.mp4",
+		"items": [
+			{ "type":"Jeans", "color":"Black", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"White", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Grey", "audience":"Men" }
+		]
+	},	
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91zUM9u8vkS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Light Brown", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"Grey", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Black", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91NWXtM4clS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Grey", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"Black", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Black", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91u2Yy0jBYS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Black", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"White", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Black", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91JFsszCOJS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Grey", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"Black", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Black Boots", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/918-qxGBgBS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Black", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"Black", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Black Boots", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/81aA417lTvS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Black", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"White", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Black", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91VmXR5zuKS.mp4",
+		"items": [
+			{ "type":"Jeans", "color":"Black", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"Black Check", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Black", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91hB1VV1KIS.mp4",
+		"items": [
+			{ "type":"Jeans", "color":"Black", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"Grey", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Black", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91tmg9k6EwS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Light Grey", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"Light Grey", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Brown", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91AjwpdxGQS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Brown", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"White", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Brown", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91LCzyNHyzS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Light Brown", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"Blue", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"White", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/914Tr36tT1S.mp4",
+		"items": [
+			{ "type":"Pants", "color":"White", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"Blue", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"White", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91Yv1RfRjwS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Red", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"White", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Brown", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91tN-MOUDPS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Blue", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"White", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Light Brown", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91LhAYYTXHS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Light Brown", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"Blue", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Brown", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91npIwc1i2S.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Black", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"White", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Light Brown", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91-pSnuXR4S.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Maroon", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"Grey", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Brown", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/919o-wKIONS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Light Brown", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"Light Grey", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Brown", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/81u544C3ZbS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Red", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"Grey", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"White", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/91oZ5RWJ-QS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Blue", "audience":"Men" }, 
+			{ "type":"Shirt", "color":"Red", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Brown", "audience":"Men" }
+		]
+	},
+	{
+		"visualUrl": "http://ecx.images-amazon.com/images/I/81dn9Q3F1MS.mp4",
+		"items": [
+			{ "type":"Pants", "color":"Green", "audience":"Men" }, 
+			{ "type":"TShirt", "color":"Grey", "audience":"Men" }, 
+			{ "type":"Shoes", "color":"Brown", "audience":"Men" }
+		]
 	}
 ]
